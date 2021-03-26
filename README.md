@@ -72,7 +72,7 @@ blastn -query AT.cds.fa -out nucl_blast.out -db nucldb -outfmt 6 -evalue 0.01 -n
 ```  
 蛋白比对
 ```
-blastn -query Os.pep.fa -out pep_blast.out -db pepdb -outfmt 6 -evalue 0.01 -num_threads 1
+blastp -query Os.pep.fa -out pep_blast.out -db pepdb -outfmt 6 -evalue 0.01 -num_threads 1
 ```
 
 #### 任务5. 利用BUSCO软件评估基因组组装质量
@@ -104,7 +104,7 @@ wgsim
 ```
 - **命令行**  
 ```
-cd PracticeData/task1/data/
+cd PracticeData/task6/data/
 ls
 gunzip ecoli.contigs.fasta.gz
 wgsim -N 20000 -1 150 -2 150  -S 1 ecoli.contigs.fasta reads_R1.fastq reads_R2.fastq /dev/null
